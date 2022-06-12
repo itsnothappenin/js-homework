@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    function callback(x) {
+      return x % 5 === 0 ;
+
+    }
+
+    function filter(nums =[], callback) {
+      const filtered = [];
+      for (let i = 0; i < nums.length; i++) {
+         const current = callback(nums[i], i, nums);
+         filtered.push(current);
+      }
+      return filtered;
+    }
+
+    </script>
+  </body>
+</html>

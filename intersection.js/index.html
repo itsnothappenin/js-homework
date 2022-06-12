@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    function includes(nums = [], a) {
+
+      for ( let i of nums) {
+        if (i === a) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+
+      function intersection(arr1 = [], arr2 = []) {
+
+        let intersectionArr = [];
+        for ( let i of arr1 ) {
+            if (includes(arr2, i))   {
+              intersectionArr.push(i)
+          }
+        }
+        return intersectionArr;
+      }
+
+    </script>
+
+  </body>
+</html>

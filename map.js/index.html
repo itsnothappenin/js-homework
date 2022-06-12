@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    function callback(a) {
+      return a*2;
+    }
+
+    function map(nums =[], callback) {
+      const mapped = [];
+      for (let i = 0; i < nums.length; i++) {
+         const current = callback(nums[i], i, nums);
+         mapped.push(current);
+      }
+      return mapped;
+    }
+
+
+
+
+    </script>
+
+
+  </body>
+</html>

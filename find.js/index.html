@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      function callback (x) {
+        return x % 2 === 0;
+      }
+
+      function find(nums = [], callback) {
+        for ( i = 0; i < nums.length; i++) {
+          const current = callback(nums[i], i, nums);
+          break;
+        }
+         return current;
+      }
+
+    </script>
+  </body>
+</html>

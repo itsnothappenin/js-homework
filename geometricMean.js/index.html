@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      function geometricMean( nums = [] ) {
+
+        let product = 1;
+        for ( i = 0; i < nums.length; i++) {
+          product *=  nums[i]
+        }
+        let mean = 1;
+        mean = Math.pow(product, 1 / nums.length)  // what about this -- product ^ ( 1 / nums.length )
+        return mean;
+
+      }
+
+
+    </script>
+  </body>
+</html>

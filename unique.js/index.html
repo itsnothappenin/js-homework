@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+
+    function includes(nums = [], a) {
+
+      for ( let i of nums) {
+        if (i === a) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+
+
+    function unique(nums = []) {
+
+      let uniqueArr = [];
+      for (let i = 0; i < nums.length; i++) {
+        const currentElement = nums[i];
+        const restOfTheNums = nums.slice(i + 1);
+        if (!includes(restOfTheNums, currentElement)) {
+          uniqueArr.push(currentElement);
+        }
+      }
+      return uniqueArr;
+    }
+
+    </script>
+
+  </body>
+</html>

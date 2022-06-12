@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    function random( lower, upper ) {
+      return  Math.floor(Math.random() * (upper - lower + 1) ) + lower;
+    }
+
+    function pickOne (array) {
+      const randomIndex = random(0, array.length - 1);
+      return array[randomIndex];
+     }
+
+    </script>
+  </body>
+</html>
