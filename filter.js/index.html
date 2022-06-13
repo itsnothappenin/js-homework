@@ -7,20 +7,26 @@
   <body>
     <script>
 
-    function callback(x) {
-      return x % 5 === 0 ;
+   let arr = [1,2,3,5,-9,-7,-1,-2];
 
-    }
+        function filter(arr, callback) {
+          let filtered = [];
+          for ( let i = 0; i < arr.length; i++) {
+            const result = callback(arr[i], i, arr);
+            if ( result === true ) {
+              filtered.push(result);
+            }
+          }
+          return filtered;
+        }
 
-    function filter(nums =[], callback) {
-      const filtered = [];
-      for (let i = 0; i < nums.length; i++) {
-         const current = callback(nums[i], i, nums);
-         filtered.push(current);
-      }
-      return filtered;
-    }
+        let musbetler = filter(arr, function (x) {
+          return x > 0;
+        });
 
+        console.log(musbetler);
+
+//  value yerine true verir
     </script>
   </body>
 </html>
