@@ -7,18 +7,20 @@
   <body>
     <script>
 
-      function callback (x) {
-        return x % 2 === 0;
-      }
+       let arr = [1,2,3,5,-9,-7,-1,-2];
 
-      function find(nums = [], callback) {
-        for ( i = 0; i < nums.length; i++) {
-          const current = callback(nums[i], i, nums);
-          break;
+      function find (arr, callback) {
+        let found = '';
+        for ( let i = 0; i < arr.length; i++) {
+          const result = callback(arr[i], i, arr)
+            if ( result === true ) {
+              found += result;
+              break;
+            }
+          }
+          return found;
         }
-         return current;
-      }
-
+      
     </script>
   </body>
 </html>
