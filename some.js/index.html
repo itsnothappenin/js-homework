@@ -7,15 +7,15 @@
   <body>
     <script>
 
-      function callback(x) {
-        return x < 5;
-      }
-
-      function some(nums =[], callback) {
-        for ( i = 0; i < nums.length; i++) {
-          const current = callback(nums[i], i, nums);
+        function some (arr, callback) {
+        let somed = '';
+        for ( let i = 0; i < arr.length; i++) {
+          const result = callback(arr[i], i, arr)
+          if (result) {
+          somed += result;
+          }
         }
-        return current;
+        return somed;
       }
 
     </script>
