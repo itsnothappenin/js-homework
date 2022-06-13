@@ -7,18 +7,37 @@
   <body>
     <script>
 
-    function callback(a) {
-      return a*2;
-    }
+   let arr = [1,2,3,5];
 
-    function map(nums =[], callback) {
-      const mapped = [];
-      for (let i = 0; i < nums.length; i++) {
-         const current = callback(nums[i], i, nums);
-         mapped.push(current);
+      function map(arr, mapFunc) {
+        let mapped =[];
+        for ( let i=0; i<arr.length; i++) {
+          const result = mapFunc(arr[i], i, arr);
+          mapped.push(result);
+        }
+        return mapped;
       }
-      return mapped;
-    }
+
+      let square = map(arr, num =>
+      num ** 2);
+      // burasini basha dushmedim, men ashagdaki kimi yazmishdim ama alinmadi 
+
+      console.log(square);
+
+
+
+    // function map(array, callback) {
+    //   const mapped = [];
+    //   for (let i = 0; i < array.length; i++) {
+    //      const current = callback(array[i], i, array);
+    //      mapped.push(current);
+    //   }
+    //   return mapped;
+    // }
+    //
+    // function callback(array, function(array[i], i, array) {
+    //   return array[i] ** 2;
+    // })
 
 
 
